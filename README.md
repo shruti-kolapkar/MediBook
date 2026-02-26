@@ -1,42 +1,38 @@
 🏥 MediBook – Web Application
-
-Online Medical Appointment Booking System (Django)
-
+Full-Stack Doctor Appointment & Medical Record Management System (Django)
 📌 Introduction
 
-MediBook is a full-stack web application built using Django that allows users to book medical appointments with doctors through a clean and user-friendly interface.
+The MediBook Web Application is a full-stack healthcare platform built using Django that allows users (patients) to book doctor appointments, view doctor profiles, and manage basic medical information through a clean and user-friendly interface.
 
-Unlike simple static healthcare websites, MediBook provides dynamic doctor listings, appointment booking, and an admin panel to manage doctors and approve or reject appointments. The system is designed to demonstrate clean backend architecture, role-based actions (user & admin), and a responsive UI suitable for real-world healthcare booking platforms.
+Unlike basic static healthcare websites, this application provides dynamic appointment booking, backend-driven doctor listings, and an admin panel for managing doctors, patients, and schedules. The system is designed to demonstrate clean architecture, responsive UI, and efficient backend data handling, making it suitable for learning full-stack development and building real-world healthcare web applications.
 
 ❗ Problem Statement
 
-Traditional clinic or hospital appointment systems:
+Traditional clinic and hospital websites:
 
-Are often manual or phone-call based
+Are often static and lack real-time booking functionality
 
-Do not provide real-time appointment booking
+Do not support dynamic doctor availability and scheduling
 
-Lack proper admin control over appointment approvals
+Provide poor user experience for patients
 
-Provide poor user experience
+Lack centralized admin management tools
 
-Are difficult to scale and manage
+Are difficult to scale and maintain
 
-Do not maintain digital appointment history
-
-This project solves these problems by providing a database-driven, scalable web application with structured backend logic and an admin-controlled appointment workflow.
+This project solves these problems by implementing a database-driven, scalable web application for healthcare appointment management with structured backend logic and a responsive frontend.
 
 🎯 Objectives
 
-Build a full-stack medical appointment system using Django
+Build a full-stack healthcare web application using Django
 
-Allow users to view doctors and book appointments
+Enable online doctor appointment booking
 
-Provide appointment status tracking (Pending / Approved / Rejected)
+Provide doctor profile and availability listings
 
-Enable admin to approve or reject appointments
+Offer an admin panel for managing doctors, patients, and schedules
 
-Design a clean and responsive UI
+Design a clean and responsive user interface
 
 Implement structured backend architecture
 
@@ -45,33 +41,29 @@ Create a scalable foundation for future healthcare features
 🧩 System Architecture
 🔹 Presentation Layer
 
-HTML, CSS, Bootstrap
+HTML, CSS, JavaScript
 
 Django Templates
 
-Responsive UI for mobile and desktop
+Responsive UI for multiple devices
 
 🔹 Application Layer
 
 Django Views & URL Routing
 
-Business logic for booking appointments
-
-Authentication & authorization logic
+Business logic for appointment booking & medical data handling
 
 🔹 Data Layer
 
 Django ORM
 
-SQLite Database (extendable to MySQL/PostgreSQL)
+SQLite database (can be extended to MySQL/PostgreSQL)
 
 🔹 Admin Layer
 
 Django Admin Panel
 
-CRUD operations for doctors
-
-Approve / Reject appointments
+CRUD operations for doctors, patients, and appointments
 
 🛠️ Technologies Used
 💻 Software
@@ -84,7 +76,7 @@ HTML
 
 CSS
 
-Bootstrap
+JavaScript
 
 🗄️ Database
 
@@ -100,32 +92,35 @@ VS Code
 
 📊 Key Features
 
-👨‍⚕️ View available doctors
+🧑‍⚕️ Browse doctor profiles
+
 📅 Book doctor appointments
-📋 View my appointments
-⏳ Appointment status tracking (Pending / Approved / Rejected)
-⚙️ Admin dashboard for managing doctors
-✅ Admin approval & rejection of appointments
+
+🔍 View appointment details
+
+🧭 Smooth navigation and clean UI
+
+⚙️ Admin dashboard for managing doctors & schedules
+
 📱 Responsive design for mobile and desktop
+
 🗂️ Database-backed dynamic content
 
 🔮 Future Scope
 
-Doctor login & dashboard
+User authentication (Patient/Doctor Login & Signup)
 
-Email notifications for appointment status
+Online consultation (video call integration)
 
-Time-slot availability management
+Digital prescriptions
 
-Appointment rescheduling & cancellation
+Appointment reminders (Email/SMS)
 
-Payment integration
-
-REST API for mobile app
+REST API for mobile app integration
 
 Cloud deployment
 
 👩‍💻 Author
 
-Shruti 
+Shruti Kolapkar
 GitHub: https://github.com/shruti-kolapkar
