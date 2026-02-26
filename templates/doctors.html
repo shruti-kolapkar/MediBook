@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <h2 class="mb-0">Available Doctors</h2>
+  <form method="get" class="d-flex" style="max-width:280px;">
+    <select name="department" class="form-select" onchange="this.form.submit()">
+      <option value="">All Departments</option>
+      {% for dept in departments %}
+        <option value="{{ dept.id }}" {% if dept.id|stringformat:"s" == selected_department %}selected{% endif %}>
+          {{ dept.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+</div>
+
+<div class="row g-3">
+  {% for doctor in doctors %}
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      {% if doctor.photo %}
+        <img src="{{ doctor.photo.url }}" class="card-img-top" height="220" style="object-fit:cover;">
+      {% endif %}
+      <div class="card-body">
+        <span class="badge bg-primary mb-2">{{ doctor.department.name }}</span>
+        <h5 class="card-title">{{ doctor.name }}</h5>
+        <p class="mb-1"><b>Experience:</b> {{ doctor.experience }} years</p>
+        <p class="mb-2"><b>Available:</b> {{ doctor.available_time }}</p>
+        <a href="/book/{{ doctor.id }}/" class="btn btn-success w-100">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <p>No doctors available.</p>
+  {% endfor %}
+</div>
+{% endblock %}

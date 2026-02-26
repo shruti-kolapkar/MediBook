@@ -1,0 +1,64 @@
+/* Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #484444;
+}
+
+/* Layout */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background: #000 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar span {
+  color: #fff !important;
+}
+
+/* Hero */
+.hero-section {
+  min-height: calc(100vh - 120px);
+  background: url("/static/images/hero-doctor.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  width: 85%;
+  max-width: 1100px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 70px 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 48px;
+  white-space: nowrap;
+}
+
+.hero-overlay p {
+  color: #eee;
+}
+
+/* Footer - stays at bottom, centered */
+.site-footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+}

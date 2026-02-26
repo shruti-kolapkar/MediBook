@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container py-4">
+  <h2 class="mb-4">My Appointments</h2>
+
+  {% if appointments %}
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for appt in appointments %}
+        <tr>
+          <td>{{ appt.doctor.name }}</td>
+          <td>{{ appt.date|date:"M d, Y" }}</td>
+          <td>{{ appt.time }}</td>
+          <td>
+            {% if appt.status == 'PENDING' %}
+              <span class="badge bg-warning text-dark">Pending</span>
+            {% elif appt.status == 'APPROVED' %}
+              <span class="badge bg-success">Approved</span>
+            {% else %}
+              <span class="badge bg-danger">Rejected</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <div class="alert alert-info">
+      You have no appointments yet.
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}
